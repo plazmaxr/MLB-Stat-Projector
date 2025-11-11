@@ -1,7 +1,6 @@
 import requests
 import time
 import statsapi
-import pandas as pd
 
 GEMINI_API_KEY = "AIzaSyAbjlLIYsFcByuigBqfajUeOPf4P8CEmsk"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
