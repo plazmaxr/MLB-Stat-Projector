@@ -200,4 +200,3 @@ while True:
         else:
             print("Enter input exactly as 'player' or 'pitcher'")
             time.sleep(1)
-    # continue with code
