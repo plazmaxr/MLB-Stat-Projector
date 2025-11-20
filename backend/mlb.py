@@ -21,7 +21,6 @@ def get_player_id_by_name(name):
 def get_player_stats(player_id):
     stats_text = statsapi.player_stats(player_id, group='hitting', type='season')
     if stats_text:
-        # Parse the stats text to extract values
         stats_dict = {}
         lines = stats_text.split('\n')
         
@@ -32,7 +31,6 @@ def get_player_stats(player_id):
                 value = value.strip()
                 stats_dict[key] = value
         
-        # Display only the stats you want
         print("\nPlayer's Current Stats:")
         desired_stats = ['age', 'gamesPlayed', 'avg', 'homeRuns', 'strikeOuts', 'rbi', 'ops', 'obp', 'slg']
         
@@ -50,7 +48,6 @@ def get_player_stats(player_id):
 def get_pitcher_stats(player_id):
     stats_text = statsapi.player_stats(player_id, group='pitching', type='season')
     if stats_text:
-        # Parse the stats text to extract values
         stats_dict = {}
         lines = stats_text.split('\n')
         
@@ -61,7 +58,6 @@ def get_pitcher_stats(player_id):
                 value = value.strip()
                 stats_dict[key] = value
         
-        # Display pitcher stats
         print("\nPitcher's Current Stats:")
         desired_stats = ['age', 'gamesPlayed', 'wins', 'losses', 'era', 'strikeOuts', 'walks', 'saves', 'inningsPitched', 'whip']
         
